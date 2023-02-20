@@ -3,6 +3,7 @@ import jinja2
 import time
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
+from enrich.pg_statsDefinitions import Pg_statsClass
 
 with open("character.toml", mode="rb") as fp:
     conf = tomli.load(fp)
@@ -16,8 +17,9 @@ class TemplateChangeHandler(FileSystemEventHandler):
         # sheet building
         template = templateEnv.get_template( "base.html" )
         # magic happens
-        templateVars = conf
-
+        pg_statsClass=Pg_statsClass(conf)
+        newConf=pg_statsClass.makeComputations()
+        templateVars = newConf
         outputText = template.render(templateVars)
 
         # to save the results
