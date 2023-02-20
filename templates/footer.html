@@ -8,9 +8,66 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
     integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
     crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        $.fn.getDataOpenDnd = function(url) {
+            $.ajax({
+                url: url,
+                method: 'GET',
+                data: {var:'val'},
+                // data: JSON.stringify({var:'val'}), // send data in the request body
+                // contentType: "application/json; charset=utf-8",  // if sending in the request body
+                dataType: 'json'
+            }).done(function(data, textStatus, jqXHR) {
+                // because dataType is json 'data' is guaranteed to be an object
+                console.log(data);
+                console.log('done');
+            }).fail(function(jqXHR, textStatus, errorThrown) {
+                // the response is not guaranteed to be json
+                if (jqXHR.responseJSON) {
+                    // jqXHR.reseponseJSON is an object
+                    console.log('failed with json data');
+                }
+                else {
+                    // jqXHR.responseText is not JSON data
+                    console.log('failed with unknown data'); 
+                }
+            }).always(function(dataOrjqXHR, textStatus, jqXHRorErrorThrown) {
+                console.log('always');
+            });
+        };
+        $( document ).ready(function() {
+            $.fn.getDataOpenDnd(url='https://api.open5e.com/spells/acid-arrow/');
+
+        });
+    </script>
 
 <body>
 
 </body>
 
 </html>
+
+<!-- $.ajax({
+	url: 'api/url',
+	method: 'POST',
+	data: {var:'val'},
+	// data: JSON.stringify({var:'val'}), // send data in the request body
+	// contentType: "application/json; charset=utf-8",  // if sending in the request body
+	dataType: 'json'
+}).done(function(data, textStatus, jqXHR) {
+	// because dataType is json 'data' is guaranteed to be an object
+	console.log('done');
+}).fail(function(jqXHR, textStatus, errorThrown) {
+	// the response is not guaranteed to be json
+	if (jqXHR.responseJSON) {
+		// jqXHR.reseponseJSON is an object
+		console.log('failed with json data');
+	}
+	else {
+		// jqXHR.responseText is not JSON data
+		console.log('failed with unknown data'); 
+	}
+}).always(function(dataOrjqXHR, textStatus, jqXHRorErrorThrown) {
+	console.log('always');
+}); -->
