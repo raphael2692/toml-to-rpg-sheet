@@ -4,6 +4,8 @@ import time
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 from enrich.pg_statsDefinitions import Pg_statsClass
+from _logger import logger
+
 
 with open("character.toml", mode="rb") as fp:
     conf = tomli.load(fp)
@@ -13,16 +15,14 @@ class TemplateChangeHandler(FileSystemEventHandler):
         # jinja2 setup
         templateLoader = jinja2.FileSystemLoader(searchpath="templates")
         templateEnv = jinja2.Environment(loader=templateLoader)
-        print(f'event type: {event.event_type}  path : {event.src_path}')
+        logger.info(f'event type: {event.event_type}  path : {event.src_path}')
         # sheet building
         template = templateEnv.get_template( "base.html" )
-        
-        print(conf)
         
         # magic happens
         pg_statsClass=Pg_statsClass(conf)
         newConf=pg_statsClass.makeComputations()
-        print(newConf)
+        logger.debug(conf)(newConf)
         templateVars = newConf
         outputText = template.render(templateVars)
 
@@ -40,7 +40,7 @@ if __name__ == "__main__":
     observer = Observer()
     observer.schedule(event_handler, path='templates', recursive=True)
     observer.start()
-    print("Listening for changes in /templates...")
+    logger.info("Listening for changes in /templates...")
     try:
         while True:
             time.sleep(1)
