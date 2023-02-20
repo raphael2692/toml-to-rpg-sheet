@@ -48,7 +48,7 @@ if __name__ == "__main__":
         conf = tomli.load(f)
     event_handler = TemplateChangeHandler()
     observer = Observer()
-    paths = ["templates", "assets", "inputs"]
+    paths = ["templates", "inputs"]
     for path in paths: 
         observer.schedule(event_handler, path=path, recursive=True)
     observer.start()
