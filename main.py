@@ -32,7 +32,7 @@ if __name__ == "__main__":
     observer = Observer()
     observer.schedule(event_handler, path='templates', recursive=True)
     observer.start()
-
+    print("Listening for changes in /templates...")
     try:
         while True:
             time.sleep(1)
