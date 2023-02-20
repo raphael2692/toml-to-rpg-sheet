@@ -9,3 +9,16 @@ experience_points = "1058"
 
 [player]
 name = "Raffa"
+
+[stats]
+strength = "10"
+dexterity = "17"
+constitution = "12"
+intelligence = "14"
+wisdom = "10"
+charisma = "14"
+
+[skills]
+
+inspiration = "1"
+proficiency_bonus = "3"
