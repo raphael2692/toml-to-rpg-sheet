@@ -22,7 +22,7 @@ class TemplateChangeHandler(FileSystemEventHandler):
         # magic happens
         pg_statsClass=Pg_statsClass(conf)
         newConf=pg_statsClass.makeComputations()
-        logger.debug(conf)(newConf)
+        logger.debug(newConf)
         templateVars = newConf
         outputText = template.render(templateVars)
 
@@ -38,7 +38,9 @@ class TemplateChangeHandler(FileSystemEventHandler):
 if __name__ == "__main__":
     event_handler = TemplateChangeHandler()
     observer = Observer()
-    observer.schedule(event_handler, path='templates', recursive=True)
+    paths = ["templates", "assets"]
+    for path in paths: 
+        observer.schedule(event_handler, path=path, recursive=True)
     observer.start()
     logger.info("Listening for changes in /templates...")
     try:

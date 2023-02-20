@@ -1,62 +1,78 @@
 <div class="container stat-box" id="header">
 
-    <div class="row">
-        <div class="col-5">
-            <div class="row">
-                <h2>Dungeons and Dragons 5e</h2>
-            </div>
+    <div class="row ">
+        <div class="col-sm-2">
+            <br>
+            <br>
+            <div class="row logo-box">
 
-            <div class="row">
-                {{ character["name"] }}
             </div>
-
+        </div>
+        <div class="col-sm-4 px-2">
             <div class="row">
-                NOME PERSONAGGIO
+                <br>
+            </div>
+            <br>
+            <div class="row">
+                <p class="lead">{{ character["name"] }}</p>
+                <hr>
+            </div>
+            <div class="row">
+                <p>Character Name</p>
             </div>
         </div>
 
-        <div class="col-7">
+        <div class="col-sm-5">
             <div class="row">
-                <div class="col-4">
+                <div class="col-sm-4">
                     <div class="row">
-                        {{ character["class"] }}, {{ character["level"] }}
+                        <p class="lead"> {{ character["class"] }}, {{ character["level"] }}</p>
+                        <hr>
                     </div>
                     <div class="row">
-                        CLASSE E LIVELLO
+                        <p>Class and level</p>
                     </div>
                     <div class="row">
-                        {{ character["race"] }}
+                        <p class="lead">{{ character["race"] }}</p>
+                        <hr>
                     </div>
                     <div class="row">
-                        RAZZA
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="row">
-                        {{ character["background"] }}
-                    </div>
-                    <div class="row">
-                        BACKGROUND
-                    </div>
-                    <div class="row">
-                        {{ character["alignement"] }}
-                    </div>
-                    <div class="row">
-                        ALLINEAMENTO
+                        <p>Race</p>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-sm-4">
                     <div class="row">
-                        {{ player["name"] }}
+                        <p class="lead">{{ character["background"] }}</p>
+                        <hr>
                     </div>
                     <div class="row">
-                        NOME GIOCATORE
+                        <p>Background</p>
                     </div>
                     <div class="row">
-                        {{ character["experience_points"] }}
+                        <p class="lead">{{ character["alignement"] }}</p>
+                        <hr>
+
                     </div>
                     <div class="row">
-                        PUNTI ESPERIENZA
+                        <p>Alignement</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="row">
+                        <p class="lead">{{ player["name"] }}</p>
+                        <hr>
+
+                    </div>
+                    <div class="row">
+                        <p>Player name</p>
+                    </div>
+                    <div class="row">
+                        <p class="lead">{{ character["experience_points"] }}</p>
+                        <hr>
+
+                    </div>
+                    <div class="row">
+                        <p>Experience points</p>
                     </div>
                 </div>
             </div>
@@ -64,5 +80,3 @@
         </div>
     </div>
 </div>
-
-

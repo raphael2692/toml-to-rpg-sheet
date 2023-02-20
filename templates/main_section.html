@@ -1,9 +1,9 @@
 <div class="container">
     <div class="row">
-        <div class="col-4">
+        <div class="col-sm-4">
             <!-- stats and skills -->
             <div class="row" id="stats_and_skills">
-                <div class="col-6" id="stats">
+                <div class="col-sm-6" id="stats">
                     <div class="stat-box text-center" id="strength">
                         <div class="label ">
                             Strength
@@ -11,7 +11,7 @@
                         <div>
                             {{ stats.strength }}
                         </div>
-                            <p>{{ statMods.strength_mod }}</p> 
+                        <p>{{ statMods.strength_mod }}</p>
                     </div>
                     <div class="stat-box text-center" id="dexterity">
                         <div class="label">
@@ -20,7 +20,7 @@
                         <div>
                             {{ stats.dexterity }}
                         </div>
-                        <p>{{ statMods.dexterity_mod }}</p> 
+                        <p>{{ statMods.dexterity_mod }}</p>
                     </div>
                     <div class="stat-box text-center" id="constitution">
                         <div class="label">
@@ -29,16 +29,12 @@
                         <div>
                             {{ stats.constitution }}
                         </div>
-                        <p>{{ statMods.constitution_mod }}</p> 
+                        <p>{{ statMods.constitution_mod }}</p>
                     </div>
                     <div class="stat-box text-center" id="intelligence">
-                        <div class="label">
-                            Intelligence
-                        </div>
-                        <p>{{ statMods.intelligence_mod }}</p> 
-                        <div>
-                            {{ stats.intelligence }}
-                        </div>
+                        <div class="label">Intelligence</div>
+                        <div>{{ stats.intelligence }}</div>
+                        <p>{{ statMods.intelligence_mod }}</p>
                     </div>
                     <div class="stat-box text-center" id="wisdom">
                         <div class="label">
@@ -47,7 +43,7 @@
                         <div>
                             {{ stats.wisdom }}
                         </div>
-                        <p>{{ statMods.wisdom_mod }}</p> 
+                        <p>{{ statMods.wisdom_mod }}</p>
                     </div>
                     <div class="stat-box text-center" id="charisma">
                         <div class="label">
@@ -56,57 +52,57 @@
                         <div>
                             {{ stats.charisma }}
                         </div>
-                        <p>{{ statMods.charisma_mod }}</p> 
+                        <p>{{ statMods.charisma_mod }}</p>
                     </div>
                 </div>
-                <div class="col-6" id="skills">
+                <div class="col-sm-6" id="skills">
                     <div class="row stat-box " id="inspiration">
-                        <div class="col-6 ">
+                        <div class="col-sm-6 ">
                             {{ skills.inspiration }}
                         </div>
-                        <div class="col-6">
+                        <div class="col-sm-6">
                             Inspiration
                         </div>
                     </div>
                     <div class="row stat-box " id="proficiency_bonus">
-                        <div class="col-6">
+                        <div class="col-sm-6">
                             {{ skills.proficiency_bonus }}
                         </div>
-                        <div class="col-6">
+                        <div class="col-sm-6">
                             Proficiency Bonus
                         </div>
                     </div>
 
                     <div class="row stat-box" id="saving_throws">
                         <div class="row">
-                            <div class="col-3">check</div>
-                            <div class="col-4">{{ skills.saving_throws.strength}}</div>
-                            <div class="col col-5">Strength</div>
+                            <div class="col-sm-3">check</div>
+                            <div class="col-sm-4">{{ skills.saving_throws.strength}}</div>
+                            <div class="col col-sm-5">Strength</div>
                         </div>
                         <div class="row">
-                            <div class="col-3">check</div>
-                            <div class="col-4">{{ skills.saving_throws.dexterity}}</div>
-                            <div class="col col-5">Dexterity</div>
+                            <div class="col-sm-3">check</div>
+                            <div class="col-sm-4">{{ skills.saving_throws.dexterity}}</div>
+                            <div class="col col-sm-5">Dexterity</div>
                         </div>
                         <div class="row">
-                            <div class="col-3">check</div>
-                            <div class="col-4">{{ skills.saving_throws.constitution}}</div>
-                            <div class="col col-5">Constitution</div>
+                            <div class="col-sm-3">check</div>
+                            <div class="col-sm-4">{{ skills.saving_throws.constitution}}</div>
+                            <div class="col col-sm-5">Constitution</div>
                         </div>
                         <div class="row">
-                            <div class="col-3">check</div>
-                            <div class="col-4">{{ skills.saving_throws.intelligence}}</div>
-                            <div class="col col-5">Intelligence</div>
+                            <div class="col-sm-3">check</div>
+                            <div class="col-sm-4">{{ skills.saving_throws.intelligence}}</div>
+                            <div class="col col-sm-5">Intelligence</div>
                         </div>
                         <div class="row">
-                            <div class="col-3">check</div>
-                            <div class="col-4">{{ skills.saving_throws.wisdom}}</div>
-                            <div class="col col-5">Wisdom</div>
+                            <div class="col-sm-3">check</div>
+                            <div class="col-sm-4">{{ skills.saving_throws.wisdom}}</div>
+                            <div class="col col-sm-5">Wisdom</div>
                         </div>
                         <div class="row">
-                            <div class="col-3">check</div>
-                            <div class="col-4">{{ skills.saving_throws.charisma}}</div>
-                            <div class="col col-5">Charisma</div>
+                            <div class="col-sm-3">check</div>
+                            <div class="col-sm-4">{{ skills.saving_throws.charisma}}</div>
+                            <div class="col col-sm-5">Charisma</div>
                         </div>
                         <div class="row stat-box-bottom-title">
                             <p class="text-center">SAVING THROWS</p>
@@ -115,94 +111,94 @@
 
                     <div class="row stat-box " id="skills">
                         <div class="row">
-                            <div class="col-3">check</div>
-                            <div class="col-4">{{ skills.skills.acrobatics }}</div>
-                            <div class="col col-5">Acrobatics</div>
+                            <div class="col-sm-3">check</div>
+                            <div class="col-sm-4">{{ skills.skills.acrobatics }}</div>
+                            <div class="col col-sm-5">Acrobatics</div>
                         </div>
                         <div class="row">
-                            <div class="col-3">check</div>
-                            <div class="col-4">{{ skills.skills.animal_handling }}</div>
-                            <div class="col col-5">Animal Handling</div>
+                            <div class="col-sm-3">check</div>
+                            <div class="col-sm-4">{{ skills.skills.animal_handling }}</div>
+                            <div class="col col-sm-5">Animal Handling</div>
                         </div>
                         <div class="row">
-                            <div class="col-3">check</div>
-                            <div class="col-4">{{ skills.skills.arcana }}</div>
-                            <div class="col col-5">Arcana</div>
+                            <div class="col-sm-3">check</div>
+                            <div class="col-sm-4">{{ skills.skills.arcana }}</div>
+                            <div class="col col-sm-5">Arcana</div>
                         </div>
                         <div class="row">
-                            <div class="col-3">check</div>
-                            <div class="col-4">{{ skills.skills.athletics }}</div>
-                            <div class="col col-5">Athletics</div>
+                            <div class="col-sm-3">check</div>
+                            <div class="col-sm-4">{{ skills.skills.athletics }}</div>
+                            <div class="col col-sm-5">Athletics</div>
                         </div>
                         <div class="row">
-                            <div class="col-3">check</div>
-                            <div class="col-4">{{ skills.skills.deception }}</div>
-                            <div class="col col-5">Deception</div>
+                            <div class="col-sm-3">check</div>
+                            <div class="col-sm-4">{{ skills.skills.deception }}</div>
+                            <div class="col col-sm-5">Deception</div>
                         </div>
                         <div class="row">
-                            <div class="col-3">check</div>
-                            <div class="col-4">{{ skills.skills.history }}</div>
-                            <div class="col col-5">History</div>
+                            <div class="col-sm-3">check</div>
+                            <div class="col-sm-4">{{ skills.skills.history }}</div>
+                            <div class="col col-sm-5">History</div>
                         </div>
                         <div class="row">
-                            <div class="col-3">check</div>
-                            <div class="col-4">{{ skills.skills.acrobatics }}</div>
-                            <div class="col col-5">Insight</div>
+                            <div class="col-sm-3">check</div>
+                            <div class="col-sm-4">{{ skills.skills.acrobatics }}</div>
+                            <div class="col col-sm-5">Insight</div>
                         </div>
                         <div class="row">
-                            <div class="col-3">check</div>
-                            <div class="col-4">{{ skills.skills.intimidation }}</div>
-                            <div class="col col-5">Intimidation</div>
+                            <div class="col-sm-3">check</div>
+                            <div class="col-sm-4">{{ skills.skills.intimidation }}</div>
+                            <div class="col col-sm-5">Intimidation</div>
                         </div>
                         <div class="row">
-                            <div class="col-3">check</div>
-                            <div class="col-4">{{ skills.skills.investigation }}</div>
-                            <div class="col col-5">Investigation</div>
+                            <div class="col-sm-3">check</div>
+                            <div class="col-sm-4">{{ skills.skills.investigation }}</div>
+                            <div class="col col-sm-5">Investigation</div>
                         </div>
                         <div class="row">
-                            <div class="col-3">check</div>
-                            <div class="col-4">{{ skills.skills.medicine }}</div>
-                            <div class="col col-5">Medicine</div>
+                            <div class="col-sm-3">check</div>
+                            <div class="col-sm-4">{{ skills.skills.medicine }}</div>
+                            <div class="col col-sm-5">Medicine</div>
                         </div>
                         <div class="row">
-                            <div class="col-3">check</div>
-                            <div class="col-4">{{ skills.skills.nature }}</div>
-                            <div class="col col-5">Nature</div>
+                            <div class="col-sm-3">check</div>
+                            <div class="col-sm-4">{{ skills.skills.nature }}</div>
+                            <div class="col col-sm-5">Nature</div>
                         </div>
                         <div class="row">
-                            <div class="col-3">check</div>
-                            <div class="col-4">{{ skills.skills.perception }}</div>
-                            <div class="col col-5">Perception</div>
+                            <div class="col-sm-3">check</div>
+                            <div class="col-sm-4">{{ skills.skills.perception }}</div>
+                            <div class="col col-sm-5">Perception</div>
                         </div>
                         <div class="row">
-                            <div class="col-3">check</div>
-                            <div class="col-4">{{ skills.skills.performance }}</div>
-                            <div class="col col-5">Performance</div>
+                            <div class="col-sm-3">check</div>
+                            <div class="col-sm-4">{{ skills.skills.performance }}</div>
+                            <div class="col col-sm-5">Performance</div>
                         </div>
                         <div class="row">
-                            <div class="col-3">check</div>
-                            <div class="col-4">{{ skills.skills.persuasion }}</div>
-                            <div class="col col-5">Persuasion</div>
+                            <div class="col-sm-3">check</div>
+                            <div class="col-sm-4">{{ skills.skills.persuasion }}</div>
+                            <div class="col col-sm-5">Persuasion</div>
                         </div>
                         <div class="row">
-                            <div class="col-3">check</div>
-                            <div class="col-4">{{ skills.skills.religion }}</div>
-                            <div class="col col-5">Religion</div>
+                            <div class="col-sm-3">check</div>
+                            <div class="col-sm-4">{{ skills.skills.religion }}</div>
+                            <div class="col col-sm-5">Religion</div>
                         </div>
                         <div class="row">
-                            <div class="col-3">check</div>
-                            <div class="col-4">{{ skills.skills.sleight_of_hand }}</div>
-                            <div class="col col-5">Sleight of Hand</div>
+                            <div class="col-sm-3">check</div>
+                            <div class="col-sm-4">{{ skills.skills.sleight_of_hand }}</div>
+                            <div class="col col-sm-5">Sleight of Hand</div>
                         </div>
                         <div class="row">
-                            <div class="col-3">check</div>
-                            <div class="col-4">{{ skills.skills.stealth }}</div>
-                            <div class="col col-5">Stealth</div>
+                            <div class="col-sm-3">check</div>
+                            <div class="col-sm-4">{{ skills.skills.stealth }}</div>
+                            <div class="col col-sm-5">Stealth</div>
                         </div>
                         <div class="row">
-                            <div class="col-3">check</div>
-                            <div class="col-4">{{ skills.skills.survival }}</div>
-                            <div class="col col-5">Survival</div>
+                            <div class="col-sm-3">check</div>
+                            <div class="col-sm-4">{{ skills.skills.survival }}</div>
+                            <div class="col col-sm-5">Survival</div>
                         </div>
                         <div class="row stat-box-bottom-title">
                             <p class="text-center">SKILLS</p>
@@ -211,10 +207,10 @@
                 </div>
             </div>
         </div>
-        <div class="col-4">
+        <div class="col-sm-4">
             asd
         </div>
-        <div class="col-4">
+        <div class="col-sm-4">
             asd
         </div>
     </div>
