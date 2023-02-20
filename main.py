@@ -3,7 +3,7 @@ import jinja2
 import time
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
-from enrich.pg_statsDefinitions import Pg_statsClass
+from enrich.player import PlayerStats
 from _logger import logger
 
 
@@ -20,8 +20,8 @@ class TemplateChangeHandler(FileSystemEventHandler):
         template = templateEnv.get_template( "base.html" )
         
         # magic happens
-        pg_statsClass=Pg_statsClass(conf)
-        newConf=pg_statsClass.makeComputations()
+        player_stats=PlayerStats(conf)
+        newConf=player_stats.make_computations()
         logger.debug(newConf)
         templateVars = newConf
         outputText = template.render(templateVars)

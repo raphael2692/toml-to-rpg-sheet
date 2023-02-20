@@ -1,6 +1,6 @@
 import re
 
-def get_abilityScoresModifiers(value):
+def get_ability_scores_modifiers(value):
     mapping = {
     "1": "-5",
     "2":  "-4",
@@ -37,7 +37,7 @@ def get_abilityScoresModifiers(value):
     mod=mapping[value]
     return mod
 
-def get_abilityRef(ability):
+def get_ability_ref(ability):
     #statRef = re.search('\((.+)\)', ability).group(1)
     mapping= {
     "Dex" : "dexterity",
@@ -73,7 +73,7 @@ def get_abilityRef(ability):
         skill_dict[skill_name] = stat_ref
 
     stat_ref = skill_dict[ability]
-    statName=mapping[stat_ref]
-    return statName
+    stat_name = mapping[stat_ref]
+    return stat_name
 
 
