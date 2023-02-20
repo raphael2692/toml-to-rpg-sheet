@@ -1,4 +1,4 @@
-#### Class features
+##### Class features
 
 ###### Sneak Attack (**3d6**)
 > Once per turn, you can deal an extra 3d6 damage to one creature you hit with an attack with a finesse or ranged weapon if you have advantage on the attack roll. You don’t need advantage on the attack roll if another enemy of the target is within 5 ft. of it, that enemy isn’t incapacitated, and you don’t have disadvantage on the attack roll.
@@ -18,7 +18,7 @@
 ###### Uncanny Dodge
 > When an attacker that you can see hits you with an attack, you can use your reaction to halve the attack’s damage against you.
 
-#### Racial Traits
+##### Racial Traits
 
 ###### Lucky
 > When you roll a 1 on the d20 for an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll.
@@ -32,7 +32,7 @@
 ###### Naturally Stealthy
 > You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you.
 
-#### Feats
+##### Feats
 
 ###### Dungeon delver
 > - You have advantage on Wisdom (Perception) and Intelligence (Investigation) checks made to detect the presence of secret doors.
