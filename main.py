@@ -31,14 +31,14 @@ class TemplateChangeHandler(FileSystemEventHandler):
 
         new_conf.update({"features_and_traits": features_and_traits})
         logger.debug(new_conf)
-        templateVars = new_conf
-        outputText = template.render(templateVars)
+        template_vars = new_conf
+        output_text = template.render(template_vars)
 
         # to save the results
-        char_name = conf["character"]["name"]
+        # char_name = conf["character"]["name"]
         
-        with open(f"out/{char_name} Sheet.html", "w") as fh:
-            fh.write(outputText)
+        with open(f"docs/index.html", "w") as fh:
+            fh.write(output_text)
         
         
 
