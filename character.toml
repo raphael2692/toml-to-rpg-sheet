@@ -1,9 +1,11 @@
 [character]
 name = "Sam Sottofrasca"
-classe = "Ladro"
-livello = "5"
-razza = "halfling"
+class = "Ladro"
+level = "5"
+race = "Mezzuomo"
 background = "Investigatore"
-allineamento = "Caotico Neutrale"
-nome_giocatore = "Raffa"
-punti_esperienza = "1058"
+alignement = "Caotico Neutrale"
+experience_points = "1058"
+
+[player]
+name = "Raffa"
