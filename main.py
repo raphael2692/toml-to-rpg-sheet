@@ -10,7 +10,7 @@ templateLoader = jinja2.FileSystemLoader(searchpath="templates")
 templateEnv = jinja2.Environment(loader=templateLoader)
 
 # sheet building
-template = templateEnv.get_template( "sheet.html" )
+template = templateEnv.get_template( "base.html" )
 # magic happens
 templateVars = conf
 
@@ -20,5 +20,5 @@ outputText = template.render(templateVars)
 
 # to save the results
 char_name = conf["character"]["name"]
-with open(f"out/{char_name}_sheet.html", "w") as fh:
+with open(f"out/{char_name} Sheet.html", "w") as fh:
     fh.write(outputText)
