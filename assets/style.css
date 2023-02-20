@@ -1,14 +1,17 @@
 .stat-box {
-    border-style: dotted;
-    border-color: black;
-    padding: 10px;
-    margin-top: 10px;
+    /* border-style: dotted;
+    border-color: black; */
+    /* padding: 10px;
+    margin-top: 10px; */
+
     
 }
 
 .stat-box-bottom-title {
     border-style: none;
-    margin-top: 10px;
+    /* margin-top: 10px;
+    margin-left: 2px;
+    margin-right: 2px; */
 }
 
 .logo-box {
@@ -20,4 +23,10 @@
     text-indent: -9999px;
     overflow: hidden;
     background-repeat: no-repeat
+}
+
+#features-and-traits {
+
+    font-size: 1vw;
+
 }
