@@ -15,6 +15,9 @@ class TemplateChangeHandler(FileSystemEventHandler):
         print(f'event type: {event.event_type}  path : {event.src_path}')
         # sheet building
         template = templateEnv.get_template( "base.html" )
+        
+        print(conf)
+        
         # magic happens
         templateVars = conf
 
@@ -25,6 +28,8 @@ class TemplateChangeHandler(FileSystemEventHandler):
         
         with open(f"out/{char_name} Sheet.html", "w") as fh:
             fh.write(outputText)
+        
+        
 
 
 if __name__ == "__main__":

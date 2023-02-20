@@ -22,3 +22,7 @@ charisma = "14"
 
 inspiration = "1"
 proficiency_bonus = "3"
+
+[skills.saving_throws]
+
+strength = "10"
