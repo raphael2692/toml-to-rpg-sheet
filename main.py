@@ -22,6 +22,7 @@ class TemplateChangeHandler(FileSystemEventHandler):
         # magic happens
         pg_statsClass=Pg_statsClass(conf)
         newConf=pg_statsClass.makeComputations()
+        print(newConf)
         templateVars = newConf
         outputText = template.render(templateVars)
 
