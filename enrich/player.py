@@ -1,6 +1,6 @@
 from enrich.computations import get_ability_scores_modifiers, get_ability_ref, get_proficiency
 from _logger import logger
-from _exceptions import TooManyStarsException
+from exceptions import TooManyStarsException
 
 class PlayerStats:
     def __init__(self,conf):
