@@ -48,6 +48,18 @@ class TemplateChangeHandler(FileSystemEventHandler):
         attacks_and_spellcasting = markdown.markdown(attacks_and_spellcasting)
         new_conf.update({"attacks_and_spellcasting": attacks_and_spellcasting})
 
+        with open(f"inputs/inventory.md", "r") as f:
+            inventory = f.read()
+        
+        inventory = markdown.markdown(inventory)
+        new_conf.update({"inventory": inventory})
+
+        with open(f"inputs/notes.md", "r") as f:
+            notes = f.read()
+        
+        notes = markdown.markdown(notes)
+        new_conf.update({"notes": notes})
+
         logger.debug(new_conf)
         template_vars = new_conf
         output_text = template.render(template_vars)

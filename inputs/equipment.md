@@ -1,13 +1,34 @@
-##### Class features
+##### Weapons
 
-###### Sneak Attack (**3d6**)
-> Once per turn, you can deal an extra 3d6 damage to one creature you hit with an attack with a finesse or ranged weapon if you have advantage on the attack roll. You don’t need advantage on the attack roll if another enemy of the target is within 5 ft. of it, that enemy isn’t incapacitated, and you don’t have disadvantage on the attack roll.
+###### Shortbow
+> ranged weapon (simple, bow)
+**Category**: Items
+**Damage**: 1d6
+**Damage Type**: Piercing
+**Item Rarity**: Standard
+**Properties**: Ammunition, Range, Two-Handed
+**Range**: 80/320
 
-###### Thieves’ Cant
-> You have learned thieves’ cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal conversation. It takes four times longer to convey such a message than it does to speak the same idea plainly
+###### Rapier
+> melee weapon (martial, sword)
+**Category**: Items
+**Damage**: 1d8
+**Damage Type**: Piercing
+**Item Rarity**: Standard
+**Properties**: Finesse
 
-###### Cunning Action
-> You can take a bonus action on each of your turns to take the Dash, Disengage, or Hide action.
+###### Daggers (x2)
+> melee weapon (simple, dagger)
+**Category**: Items
+**Damage**: 1d4
+**Damage Type**: Piercing
+**Item Rarity**: Standard
+**Properties**: Finesse, Light, Range, Thrown
+**Range**: 20/60
 
-###### Fast Hands
-> You can use the bonus action granted by your Cunning Action to make a Sleight of Hand check, use your thieves’ tools to disarm a trap or open a lock, or take the Use an Object action.
+
+##### Currency
+> - Copper ()
+- Silver ()
+- Gold ()
+- Platinum ()
