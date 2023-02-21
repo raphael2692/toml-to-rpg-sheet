@@ -48,7 +48,7 @@ def get_ability_ref(ability):
     }
     
     abilities=["acrobatics_(Dex)",
-    "animal_Handling_(Wis)",
+    "animal_handling_(Wis)",
     "arcana_(Int)",
     "athletics_(Str)",
     "deception_(Cha)",
@@ -62,7 +62,7 @@ def get_ability_ref(ability):
     "performance_(Cha)",
     "persuasion_(Cha)",
     "religion_(Int)",
-    "sleight_of_Hand_(Dex)",
+    "sleight_of_hand_(Dex)",
     "stealth_(Dex)",
     "survival_(Wis)"]
 
