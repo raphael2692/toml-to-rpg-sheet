@@ -21,7 +21,6 @@ charisma = "14"
 [skills]
 
 inspiration = "1"
-proficiency_bonus = "3"
 
 [skills.saving_throws_prof]
 # "" for normal, "*" for proficiency , "**" for mastery, "+x" other bonus (not implemented yet)

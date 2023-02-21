@@ -1,22 +1,31 @@
-from enrich.computations import get_ability_scores_modifiers, get_ability_ref
+from enrich.computations import get_ability_scores_modifiers, get_ability_ref, get_proficiency
 from _logger import logger
 from _exceptions import TooManyStarsException
 
 class PlayerStats:
     def __init__(self,conf):
         self.conf= conf
+
+        self.level =  conf["character"]["level"]
+
         self.stats =  conf["stats"]
         self.skills =  conf["skills"]["skills_prof"]
         self.savingT =  conf["skills"]["saving_throws_prof"]
-        self.proficiency_bonus =  conf["skills"]["proficiency_bonus"]
+        #self.proficiency_bonus =  conf["skills"]["proficiency_bonus"]
 
     def make_computations(self):
+        self._compute_proficiency()
         self._compute_modifiers()
         self._compute_skills()
         self._compute_saving_throws()
 
         return self.conf
-    
+
+    def _compute_proficiency(self):
+        self.proficiency_bonus =  get_proficiency(self.level)
+        self.conf["skills"]["proficiency_bonus"] = get_proficiency(self.level)
+
+
     def _compute_modifiers(self):
         stat_mods = {}
 
