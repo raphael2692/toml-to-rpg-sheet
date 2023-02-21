@@ -38,7 +38,7 @@
 #       run: |
 #         python build.py
         
-        
+        # allowed permissions
 
 name: Deploy to GitHub pages
 on:
