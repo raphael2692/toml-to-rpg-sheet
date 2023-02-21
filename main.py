@@ -7,7 +7,7 @@ from enrich.player import PlayerStats
 from _logger import logger
 import markdown
 
-# todo questo main è un casino
+# TODO remove duplicated code, separate handlers, set reading files outside handlers
 
 
 
@@ -23,13 +23,31 @@ class TemplateChangeHandler(FileSystemEventHandler):
         # magic happens
         player_stats=PlayerStats(conf)
         new_conf=player_stats.make_computations()
+       
         with open(f"inputs/features_and_traits.md", "r") as f:
             features_and_traits = f.read()
-            print("ok")
-            print(features_and_traits)
+        
         features_and_traits = markdown.markdown(features_and_traits)
-
         new_conf.update({"features_and_traits": features_and_traits})
+
+        with open(f"inputs/other_proficiency_languages.md", "r") as f:
+            other_proficiency_languages = f.read()
+        
+        other_proficiency_languages = markdown.markdown(other_proficiency_languages)
+        new_conf.update({"other_proficiency_languages": other_proficiency_languages})
+
+        with open(f"inputs/equipment.md", "r") as f:
+            equipment = f.read()
+        
+        equipment = markdown.markdown(equipment)
+        new_conf.update({"equipment": equipment})
+
+        with open(f"inputs/attacks_and_spellcasting.md", "r") as f:
+            attacks_and_spellcasting = f.read()
+        
+        attacks_and_spellcasting = markdown.markdown(attacks_and_spellcasting)
+        new_conf.update({"attacks_and_spellcasting": attacks_and_spellcasting})
+
         logger.debug(new_conf)
         template_vars = new_conf
         output_text = template.render(template_vars)
@@ -52,7 +70,7 @@ if __name__ == "__main__":
     for path in paths: 
         observer.schedule(event_handler, path=path, recursive=True)
     observer.start()
-    logger.info("Listening for changes in /templates...")
+    logger.info("Listening for changes in /templates, /inputs ...")
     try:
         while True:
             time.sleep(1)
